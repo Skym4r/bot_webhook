@@ -2,7 +2,7 @@ import retailcrm
 import telebot
 import requests
 
-client = retailcrm.v5('https://cronmarket.retailcrm.ru','I2RpVdfUksGws7tEVwNLUZun6QZoYBkC')
+client = retailcrm.v5('url_retailCrm','token_retail')
 
 def ordernumb(id):
     order = client.order(id, uid_type='id')
