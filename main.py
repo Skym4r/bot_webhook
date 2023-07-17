@@ -5,7 +5,7 @@ from retail import *
 import flask
 from flask import request
 from telebot.types import CallbackQuery,InlineKeyboardButton
-bot = telebot.TeleBot('5391710140:AAHccAYz1dP6dLqbCxBg-jJlvrJf1YIXvtw')
+bot = telebot.TeleBot('токен_бота')
 app = flask.Flask(__name__, static_folder='')
 @bot.message_handler(commands=['start'])
 def starter(message):   
