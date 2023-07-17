@@ -42,10 +42,10 @@ def push():
         markup.add(button1,button2)
         bot.send_message(chat, retail,reply_markup=markup)
     if (status=='order-processing'):
-        if site=='117-kafe':
-            chat='-942618951'
-        if site=='august':
-            chat='-908134335'
+        if site=='символьный_код_магазина_1':
+            chat='chat'
+        if site=='символьный_код_магазина_2':
+            chat='chat'
         number=ordernumb(order_id)
         text='Заказа №'+str(number)+' готов для отправки на доставку? '
         markup = telebot.types.InlineKeyboardMarkup()
@@ -59,20 +59,20 @@ def accepted(call: CallbackQuery):
     order_id=call.data.split(':')[1]
     accepted=orderaccep(order_id)
     if(accepted):
-        if accepted=='117-kafe':
-            chat='-942618951'
-        if accepted=='august':
-            chat='-908134335'
+        if accepted=='символьный_код_магазина_1':
+            chat='chat'
+        if accepted=='символьный_код_магазина_2':
+            chat='chat'
         bot.send_message(chat, 'Информация передана в CRM систему')
 @bot.callback_query_handler(func=lambda call: call.data.split(':')[0] == "not_accepted")
 def accepted(call: CallbackQuery):
     order_id=call.data.split(':')[1]
     not_accepted=notaccepted(order_id) 
     if(not_accepted):
-        if not_accepted=='117-kafe':
-            chat='-942618951'
-        if not_accepted=='august':
-            chat='-908134335'
+        if not_accepted=='символьный_код_магазина_1':
+            chat='chat'
+        if not_accepted=='символьный_код_магазина_2':
+            chat='chat'
         bot.send_message(chat, 'Информация передана в CRM систему')
      
 @bot.callback_query_handler(func=lambda call: call.data.split(':')[0] == "no")
@@ -80,10 +80,10 @@ def accepted(call: CallbackQuery):
     order_id=call.data.split(':')[1]
     order=noorder(order_id)
     if(order):
-        if order=='117-kafe':
-            chat='-942618951'
-        if order=='august':
-            chat='-908134335'
+        if order=='символьный_код_магазина_1':
+            chat='chat'
+        if order=='символьный_код_магазина_2':
+            chat='chat'
         bot.send_message(chat, 'Информация передана в CRM систему')
 
 @bot.callback_query_handler(func=lambda call: call.data.split(':')[0] == "yes")
@@ -91,10 +91,10 @@ def accepted(call: CallbackQuery):
     order_id=call.data.split(':')[1]
     order=yesorder(order_id)
     if(order):
-        if order=='117-kafe':
-            chat='-942618951'
-        if order=='august':
-            chat='-908134335'
+        if order=='символьный_код_магазина_1':
+            chat='сhat'
+        if order=='символьный_код_магазина_2':
+            chat='сhat'
         bot.send_message(chat, 'Информация передана в CRM систему')
 
  
